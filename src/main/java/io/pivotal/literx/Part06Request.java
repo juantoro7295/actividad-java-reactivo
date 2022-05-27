@@ -50,8 +50,8 @@ public class Part06Request {
         return repository
                 .findAll()
                 .doOnSubscribe((si) -> System.out.println("Starring:"))
-                .doOnNext(user -> System.out.println(user.getFirstname() +" "+ user.getLastname()))
-                .doOnComplete(()-> System.out.println("The end!"));
+                .doOnNext(user -> System.out.println(user.getFirstname() + " " + user.getLastname()))
+                .doOnComplete(() -> System.out.println("The end!"));
     }
 
 }
